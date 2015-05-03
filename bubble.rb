@@ -15,4 +15,20 @@ def bubble_sort(array)
   array
 end
 
+def bubble_sort(ary)
+  sorted = false
+  until sorted
+    sorted = true
+    for index in 0..(ary.length - 2)
+      if ary[index] > ary[index + 1]
+        ary[index], ary[index + 1] = ary[index + 1], ary[index]
+        sorted = false
+      end
+    end
+  end
+
+  ary
+end
+
+
 print bubble_sort([6, 5, 3, 1, 8, 7, 2, 4])
