@@ -1,4 +1,5 @@
 require 'pry'
+# can't do merge sort in place. initializing multiple other arrays
 def merge_sort(to_sort)
   # if the array is of length 0 or 1, consider it is already sorted
   if to_sort.length <= 1
@@ -8,7 +9,6 @@ def merge_sort(to_sort)
   # otherwise split the remaining elements in two
   second_array = to_sort.slice!((to_sort.length / 2.0).round..to_sort.length)
   # recursive method call on both arrays
-  # binding.pry
   first_sorted_array = merge_sort(to_sort)
   second_sorted_array = merge_sort(second_array)
   # merge the two sorted arrays together
@@ -31,4 +31,4 @@ def merge(first_array, second_array)
   return [element] + merge(first_array, second_array)
 end
 
-print merge_sort([6, 5, 3, 1, 8, 7, 2, 4])
+print merge_sort([2, 1, 4, 5, 3, 6])
