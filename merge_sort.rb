@@ -1,4 +1,3 @@
-require 'pry'
 # can't do merge sort in place. initializing multiple other arrays
 def merge_sort(to_sort)
   # if the array is of length 0 or 1, consider it is already sorted

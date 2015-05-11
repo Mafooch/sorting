@@ -1,4 +1,4 @@
-# quick sort at wors is O(n)2 in cases where with each iteration the pivot is
+# quick sort at worst is O(n)2 in cases where with each iteration the pivot is
 # either the largest or the smallest of the elements we're sorting. can avoid
 # by selecting the pivot by looking for a median.
 # uses divide and conquer
@@ -29,4 +29,4 @@ def quick_sort(to_sort)
   return quick_sort(smaller_array).push(pivot) + quick_sort(larger_array)
 end
 
-print quick_sort([3, 2, 1, 4])
+print quick_sort([2, 3, 4, 1])
